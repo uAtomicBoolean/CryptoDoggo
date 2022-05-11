@@ -1,0 +1,30 @@
+{
+  "name": "botcoursbinance",
+  "version": "1.0.0",
+  "description": "Un bot discord donnant les cours des cryptomonnaies disponible sur Binance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uAtomicBoolean/BotCoursBinance.git"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "binance",
+    "crypto",
+    "cryptocurency",
+    "cryptomonnaie"
+  ],
+  "author": "Benjamin guirlet",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/uAtomicBoolean/BotCoursBinance/issues"
+  },
+  "homepage": "https://github.com/uAtomicBoolean/BotCoursBinance#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
