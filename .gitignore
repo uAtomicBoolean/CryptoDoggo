@@ -105,4 +105,4 @@ dist
 
 # user added files and folders
 /src/secret/
-.idea/
+.idea
