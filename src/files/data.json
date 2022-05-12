@@ -3,7 +3,16 @@
 	"cryptos": {
 		"nom": {
 			"last_maj": "int de la date YYYY-MM-DD-JJ-mm convertie en minutes",
-			"delai": "int contenant le temps d'attente en minutes"
+			"price_last_maj": "int du prix lors de la dernière maj",
+			"delai": "int contenant le temps d'attente en minutes [POTENTIELLEMENT POUR PLUS TARD]"
 		}
+	},
+	"BTC": {
+		"last_maj": 1652362545523,
+		"price_last_maj": "27231.73104264"
+	},
+	"ETH": {
+		"last_maj": 1652362556689,
+		"price_last_maj": "1847.17913322"
 	}
 }

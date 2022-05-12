@@ -33,18 +33,17 @@ const slashCommand = new SlashCommandBuilder()
  */
 async function execute( interaction ) {
     const desactiver = interaction.options.get( "desactiver" );
-    fs.readFile( "./files/data.json", function ( err, file ) {
+    fs.readFile( "./files/data.json", function ( err, fichier ) {
         if ( err ) return console.log( err );
 
-        file = JSON.parse( file );
+        fichier = JSON.parse( fichier );
         if ( desactiver )
-            file["salon_update_id"] = "";
+            fichier["salon_update_id"] = "";
         else
-            file["salon_update_id"] = interaction.channelId;
+            fichier["salon_update_id"] = interaction.channelId;
 
-        fs.writeFile( "./files/data.json", JSON.stringify( file ), function ( err ) {
-            if ( err )
-                throw ( err );
+        fs.writeFile( "./files/data.json", JSON.stringify( fichier ), function ( err ) {
+            if ( err ) throw ( err );
         });
     });
 
