@@ -5,9 +5,9 @@
  */
 
 
-const { TOKEN } = require( "secret/auth.json" );
-const { Client, Intents } = require( "discord.js" );
-
+const { TOKEN } = require( "./secret/auth.json" );
+const { Client, Intents, Collection } = require( "discord.js" );
+const { loadCommands, loadEvents } = require( "./utils/loadAssets" );
 
 const client = new Client({
 	intents: [
@@ -15,7 +15,14 @@ const client = new Client({
 	]
 });
 
-
+client.commands = new Collection();
 (async () => {
+	await loadCommands( client );
+	await loadEvents( client );
+	
 	await client.login( TOKEN );
+
+	// Décommenter le code suivant pour charger les commandes sur le serveur.
+	const { loadCommandsToGuild } = require( "./utils/loadAssets" );
+	await loadCommandsToGuild( client, "674327923192365071" );
 })()
