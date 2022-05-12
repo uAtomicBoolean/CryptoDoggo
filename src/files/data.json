@@ -1,3 +1,9 @@
 {
-	"salon_update_id": "973630405389451274"
+	"salon_update_id": "973630405389451274",
+	"cryptos": {
+		"nom": {
+			"last_maj": "int de la date YYYY-MM-DD-JJ-mm convertie en minutes",
+			"delai": "int contenant le temps d'attente en minutes"
+		}
+	}
 }
