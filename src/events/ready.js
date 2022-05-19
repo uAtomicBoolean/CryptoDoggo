@@ -18,7 +18,7 @@ const { Client } = require( "discord.js" );
 async function execute( client ) {
     console.log( `${client.user.username} is connected!` );
 
-    client.user.setActivity( "Vendre des cryptos pour devenir riche.", { type: "PLAYING" } );
+    client.user.setActivity( "vendre des cryptos pour devenir riche.", { type: "PLAYING" } );
 }
 
 

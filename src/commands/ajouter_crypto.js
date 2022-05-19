@@ -45,32 +45,7 @@ const slashCommand = new SlashCommandBuilder()
  */
 async function execute( interaction ) {
 	// Requete prix moyen = https://api.binance.com/api/v3/avgPrice?symbol=SOLEUR
-	const symbole = interaction.options.get( "symbole" ).value.toUpperCase();
-	axios
-		.get( `https://api.binance.com/api/v3/avgPrice?symbol=${symbole}EUR` )
-		.then( res => {
-			fs.readFile( "./files/data.json", function( err, fichier ) {
-				if ( err ) return console.log();
-
-				const date_maj = (new Date()).getTime();
-				fichier = JSON.parse( fichier );
-				fichier[symbole] = {
-					"last_maj": date_maj,
-					"price_last_maj": res.data["price"]
-				}
-
-				fs.writeFile( "./files/data.json", JSON.stringify( fichier ), (err) => {
-					if ( err ) throw err;
-				});
-
-				return interaction.reply( `La cryptomonnaie **${symbole}** a bien été ajoutée à la liste !` );
-			});
-		})
-		.catch( err => {
-			if ( err.response.data["code"] === -1121 )
-				return interaction.reply( `Le symbole **${symbole}** est inconnu !` );
-		});
-
+	// 
 }
 
 
